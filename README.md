@@ -48,6 +48,8 @@ Coffee is one of the most traded commodities globally, with **2.25+ billion cups
 
 ### Dataset Structure
 
+> **Note**: This is a custom-created dataset. All images were personally collected and labeled for this project.
+
 **Size**: 526 total images
 - **Training**: 448 images (234 Arabica, 214 Robusta)
 - **Testing**: 78 images (40 Arabica, 38 Robusta)
@@ -63,13 +65,13 @@ Coffee is one of the most traded commodities globally, with **2.25+ billion cups
 ### Rationale for Selection
 
 **Strengths:**
-- ✅ Real-world coffee bean photographs
+- ✅ Real-world coffee bean photographs 
 - ✅ Perfectly balanced classes (no sampling bias)
 - ✅ Consistent photography (similar lighting/angles)
 - ✅ Appropriate complexity for demonstrating deep learning
 
 **Limitations & Mitigation:**
-- ⚠️ **Small size** (373 images) → Solved with **transfer learning** + **data augmentation**
+- ⚠️ **Small size** (526 images) → Solved with **transfer learning** + **data augmentation**
 - ⚠️ **Limited variability** → Addressed with **color jitter** and **rotation augmentation**
 
 ### Data Preprocessing
@@ -285,9 +287,21 @@ Training Time: ~21 minutes
 
 ### Prerequisites
 
+Install required dependencies:
+
 ```bash
-pip install torch torchvision gradio pillow numpy
+pip install -r requirements.txt
 ```
+
+Or install manually:
+```bash
+pip install torch>=2.0.0 torchvision>=0.15.0 gradio>=3.0.0 pillow>=9.0.0 numpy>=1.20.0 matplotlib>=3.5.0
+```
+
+**Requirements:**
+- Python 3.8+
+- PyTorch 2.0+
+- CUDA (optional, for GPU acceleration)
 
 ### Dataset Structure
 
@@ -651,5 +665,3 @@ Created as a deep learning project for coffee bean classification.
 - ResNet paper: "Deep Residual Learning for Image Recognition"
 
 ---
-
-**Happy Classifying! ☕**
