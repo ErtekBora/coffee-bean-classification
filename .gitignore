@@ -27,8 +27,10 @@ wheels/
 .ipynb_checkpoints
 *.ipynb_checkpoints/
 
-# PyTorch Models
+# PyTorch Models (except final trained models)
 *.pth
+!coffee_model_simple_cnn.pth
+!coffee_model_resnet18_finetuned.pth
 *.pt
 *.ckpt
 
