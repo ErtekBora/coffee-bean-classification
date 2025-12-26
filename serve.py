@@ -163,7 +163,7 @@ def main():
     print("="*70)
     
     # Launch
-    demo.launch(share=args.share, server_port=args.port, inbrowser=True)
+    demo.launch(share=true, server_port=args.port, inbrowser=True)
 
 
 if __name__ == "__main__":
